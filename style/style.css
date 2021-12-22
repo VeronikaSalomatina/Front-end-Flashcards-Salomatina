@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Sonsie+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@700&display=swap');
+
+:root {
+    --grad-bot: #0FAB91;
+    --grad-top: #1B68AE;
+    --contrast: #A668D5;
+    padding: 1rem;
+}
+
+
+h1 {
+    font-size: 48px;
+    font-family: 'Sonsie One';
+}
+
+body {
+    display: grid;
+    justify-items: center;
+}
+
+.wrapper {
+    display: grid;
+    justify-items: center;
+    padding: 1rem;
+    box-shadow: 0 0 5px black;
+    border-radius: 1rem;
+    background-color: white;
+}
+
+.card-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 15px;
+    font-family: "Oxygen";
+    font-size: 32px;
+    background-color: whitesmoke;
+    border-radius: 1rem;
+    padding: 15px;
+}
+
+.card {
+    background: linear-gradient(var(--grad-top) 80%, var(--grad-bot));
+    border: 5px solid whitesmoke;
+    border-radius: 1rem;
+    padding: 1rem;
+    transition: 100ms;
+    color: whitesmoke;
+    width: 8rem;
+    height: 8rem;
+}
+
+.card:hover {
+    transform: scale(1.12);
+    background: linear-gradient(var(--grad-top), var(--contrast));
+    box-shadow: 0 0 2rem var(--contrast);
+    border-color: var(--contrast);
+}
