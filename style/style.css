@@ -1,59 +1,80 @@
-@import url('https://fonts.googleapis.com/css2?family=Sonsie+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@700&display=swap');
-
-:root {
-    --grad-bot: #0FAB91;
-    --grad-top: #1B68AE;
-    --contrast: #A668D5;
-    padding: 1rem;
-}
-
-
-h1 {
-    font-size: 48px;
-    font-family: 'Sonsie One';
-}
+@import url('https://fonts.googleapis.com/css2?family=McLaren&display=swap');
 
 body {
-    display: grid;
-    justify-items: center;
+    background: rgba(20, 33, 61, 20%) url("https://svg-clipart.com/clipart/map/6T9nVgB-blank-world-map-large--clipart.png")  no-repeat center;
+    background-size: 100% auto;
+    font-family: 'McLaren', cursive;
 }
 
-.wrapper {
-    display: grid;
-    justify-items: center;
-    padding: 1rem;
-    box-shadow: 0 0 5px black;
-    border-radius: 1rem;
-    background-color: white;
+.container {
+    width: 1080px;
+    height: 1080px;
+    margin: 100px auto;
+
 }
 
-.card-grid{
+.grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-gap: 15px;
-    font-family: "Oxygen";
-    font-size: 32px;
-    background-color: whitesmoke;
-    border-radius: 1rem;
-    padding: 15px;
+    /* grid-template-columns: 1fr 1fr 1fr;
+     grid-template-rows: 1fr 1fr 1fr;*/
+    grid-template-columns: 300px 300px 300px;
+    grid-template-rows: 300px 300px 300px;
+    grid-gap: 90px;
+}
+
+h1 {
+    display: block;
+    text-align: center;
+    background-color: rgb(252, 163, 17);
+    width: 100%;
+    font-size: 60px;
+    border: 10px solid rgb(20, 33, 61);
+    border-radius: 20px;
+}
+
+p {
+    font-family: McLaren, cursive;
+    font-size: 45px;
+    text-align: center;
+}
+
+.grid-card{
+    display: flex;
+    align-items: center;
+    justify-items: center;
 }
 
 .card {
-    background: linear-gradient(var(--grad-top) 80%, var(--grad-bot));
-    border: 5px solid whitesmoke;
-    border-radius: 1rem;
-    padding: 1rem;
-    transition: 100ms;
-    color: whitesmoke;
-    width: 8rem;
-    height: 8rem;
+    width: 300px;
+    height: 300px;
+    background-color: rgb(20, 33, 61);
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all .9s linear;
+    border: 10px solid rgb(20, 33, 61);
+    border-radius: 20px;
+
 }
 
 .card:hover {
-    transform: scale(1.12);
-    background: linear-gradient(var(--grad-top), var(--contrast));
-    box-shadow: 0 0 2rem var(--contrast);
-    border-color: var(--contrast);
+    transform: rotateY(180deg);
+}
+
+.front, .back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 10px;
+
+}
+
+.front {
+    background-color: rgb(252, 163, 17);
+    z-index: 2;
+}
+
+.back {
+    background-color: rgb(229, 229, 229);
+    transform: rotateY(180deg);
+    z-index: 1;
 }
